@@ -1,0 +1,1 @@
+const saldoDisponible = document.getElementById(saldoDisponible);
