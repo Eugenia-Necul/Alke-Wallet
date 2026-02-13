@@ -3,67 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú</title>
+    <title>Alke Wallet - Menú Principal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-5">
-                <div class="card shadow">
-                     <div class="card-body p-4" style="background-color: rgb(47, 134, 134); color: white;"></div>
-                        <h1 class="text-center mb-4">Saldo Disponible</h1>
+    <div class="container">
+        <div style="max-width: 600px; margin: 2rem auto;">
+            <div class="card fade-in">
+                <div class="card-header">
+                    <h1>Alke Wallet</h1>
+                    <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">Panel Principal</p>
+                </div>
 
-                    <div class="mb-4 text-center" style="font-size: xx-large;" >
-                    <p id="saldoDisponible">$300.000</p>
+                <div class="card-body">
+                    <!-- Saldo Disponible -->
+                    <div class="saldo-display">
+                        <p class="saldo-label">Saldo Disponible</p>
+                        <p class="saldo-amount" id="saldoDisponible">$300.000</p>
                     </div>
 
-                    <section>
-                        <div>
-
-                        <p class="d-inline-flex gap-1">
-                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                            Movimientos
+                    <!-- Botones de Acción -->
+                    <div class="action-buttons">
+                        <a href="deposit.html" class="btn btn-primary btn-block">
+                            💰 Depositar
                         </a>
-                        </p>
-                        
-                            <a href="deposit.html" class="btn">Depositar</a>
-                            <a href="sendmoney.html" class="btn">Enviar Dinero</a>
-                       
-    
-                        
-                            <a href="index.html" class="btn cerrarSesion">Cerrar Sesión</a>
-                        </div>
+                        <a href="sendmoney.html" class="btn btn-primary btn-block">
+                            📤 Enviar Dinero
+                        </a>
+                    </div>
 
+                    <!-- Movimientos -->
+                    <section style="margin-top: 2rem;">
+                        <button 
+                            class="btn btn-light btn-block collapse-trigger" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#movimientosCollapse" 
+                            aria-expanded="false" 
+                            aria-controls="movimientosCollapse">
+                            📊 Ver Movimientos
+                        </button>
 
-                        <div class="collapse" id="collapseExample">
-                        <div class="card card-body">
-                            <ul class="list-group">
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Pago: comercial qym
-                                    <span class="badge text-bg-primary rounded-pill">$5.000</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    traspaso de: munoz francisca
-                                    <span class="badge text-bg-primary rounded-pill">$110.000</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Pago: tienda maria lorena
-                                    <span class="badge text-bg-primary rounded-pill">$10.000</span>
-                                </li>
-                            </ul>  
-                        </div>
+                        <div class="collapse" id="movimientosCollapse">
+                            <div class="movements-list" style="margin-top: 1rem; background: #f8f9fa; border-radius: 0.5rem; padding: 1rem;">
+                                <div class="movement-item">
+                                    <div class="movement-description">
+                                        <strong>Pago:</strong> Comercial QYM
+                                        <div style="font-size: 0.85rem; color: #6c757d;">15 Ene 2025</div>
+                                    </div>
+                                    <div class="movement-amount" style="color: #dc3545;">-$5.000</div>
+                                </div>
+                                
+                                <div class="movement-item">
+                                    <div class="movement-description">
+                                        <strong>Traspaso de:</strong> Muñoz Francisca
+                                        <div style="font-size: 0.85rem; color: #6c757d;">14 Ene 2025</div>
+                                    </div>
+                                    <div class="movement-amount" style="color: #28a745;">+$110.000</div>
+                                </div>
+                                
+                                <div class="movement-item">
+                                    <div class="movement-description">
+                                        <strong>Pago:</strong> Tienda María Lorena
+                                        <div style="font-size: 0.85rem; color: #6c757d;">13 Ene 2025</div>
+                                    </div>
+                                    <div class="movement-amount" style="color: #dc3545;">-$10.000</div>
+                                </div>
+                            </div>
                         </div>
                     </section>
+
+                    <!-- Cerrar Sesión -->
+                    <div class="d-grid" style="margin-top: 2rem;">
+                        <a href="index.html" class="btn btn-success btn-block">
+                            🚪 Cerrar Sesión
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>  
+        </div>
     </div>
-   
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="/assets/js/main.js"></script>
 </body>
 </html>
