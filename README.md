@@ -9,15 +9,16 @@
 - Botones interactivos
 - Diseño Responsive
 - Interfaz intuitivo
-- Transferencias a cuentas 
+- Transferencias a cuentas
+- Sistema de validación de Login
+- Actualizar Saldo Disponible desde Deposito
 
 ## Caracteristicas por implementar
 
 - Mejoras en Accesibilidad
 - Mejoramiento estético de la interfaz
-- Actualizar saldo disponible
-- Sistema de validación de Login
-- Manejo de DOM y eventos con JavaScript
+- Actualizar saldo disponible (Global)
+- Buscador de contactos "Favoritos"
 
 ## Herramientas utilizadas 
 
